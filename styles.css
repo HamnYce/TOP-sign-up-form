@@ -28,6 +28,14 @@ input {
   margin-top: 2px;
 }
 
+input:focus:invalid {
+  outline: 1px solid red;
+}
+
+input:valid:not([type="text"]):not([type="tel"]) {
+  outline: 1px solid green;
+}
+
 label {
   width: 200px;
   padding: 10px;
