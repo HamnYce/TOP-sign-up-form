@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign-up Page</title>
 </head>
-<body>
-  
+<!-- display is row -->
+
+<body class="flex-column fc-align-center">
+  <!-- splash art with logo on top -->
+  <!--  limit the height in mobile design
+        but let the width take the majority of the space -->
+  <div class="flex-column splash-container">
+    <div class="logo-container flex-row fr-center">
+      <img class="logo-image" src="assets/logo/odin-lined.png" alt="The Odin Project Logo">
+      <p class="large-text-size special-font">ODIN</p>
+    </div>
+  </div>
+  <!-- display flex column (always) -->
+  <div class="form-total-container flex-column">
+    <!-- top of form -->
+    <header class="form-bio-container text-align-center">
+      <p class="light-bold-text regular-text-size block">
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams. Sign up
+        now to get started.
+      </p>
+      <strong class="mt-20 light-bold-text block special-font">You <em class="italic-text">know</em> you want to.</strong>
+    </header>
+    <!-- form -->
+    <!-- TODO: input validations; placeholder; pattern -->
+    <!-- make it into a card -->
+    <form id="sign-up-form" class="form-container text-align-center p-20">
+      <p class="regular-text-size">So let's do this!</p>
+      <label for="first_name">First Name
+        <input type="text">
+      </label>
+      <label for="last_name">Last Name
+        <input type="text">
+      </label>
+      <label for="email">Email
+        <input type="email">
+      </label>
+      <label for="phone-number">Phone
+        <input type="tel">
+      </label>
+      <label for="password">Password
+        <input type="password">
+      </label>
+      <label for="password-confirmation">Confirm Password
+        <input type="password">
+      </label>
+    </form>
+    <!-- already have an account? -->
+    <section class="login-container mt-20 lighter-bold-text flex-column fc-align-center">
+      <button id="sign-up-button" type="submit" form="sign-up-form">Create Account</button>
+      <p class="mt-20 mb-20">Already have an account? <a href="#">Sign in</a></p>
+    </section>
+  </div>
+  </div>
 </body>
+
 </html>
